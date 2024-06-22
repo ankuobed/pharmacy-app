@@ -1,4 +1,8 @@
+package org.school.pharmacyui.models;
+
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 // Purchase class
 public class Purchase implements Comparable<Purchase> {
@@ -40,6 +44,11 @@ public class Purchase implements Comparable<Purchase> {
 
     public LocalDateTime getPurchaseDateTime() {
         return purchaseDateTime;
+    }
+
+    public String getFormattedDateTime() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E dd MMM h:mm a", Locale.ENGLISH);
+        return purchaseDateTime.format(formatter);
     }
 
     @Override

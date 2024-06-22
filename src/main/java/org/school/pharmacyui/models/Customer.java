@@ -1,3 +1,5 @@
+package org.school.pharmacyui.models;
+
 import java.util.TreeSet;
 
 // Customer class

@@ -1,0 +1,52 @@
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 35px 20px 0px 20px;
+}
+
+.sidebar-button {
+    -fx-pref-width: 190px;
+    -fx-font-size: 14px;
+    -fx-padding: 9px 0;
+    -fx-background-radius: 6px;
+    -fx-background-color: transparent;
+}
+
+.sidebar-button-active {
+    -fx-pref-width: 190px;
+    -fx-font-size: 14px;
+    -fx-padding: 9px 0;
+    -fx-background-radius: 6px;
+    -fx-background-color: #5064F5;
+    -fx-text-fill: white;
+}
+
+.btn {
+    -fx-background-radius: 5px;
+    -fx-background-color: #5064F5;
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+}
+
+.search-field {
+    -fx-background-radius: 4px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 36px;
+}
+
+.table-cell {
+    -fx-padding: 10px 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+}
+
+.form-text-field {
+    -fx-background-radius: 4px;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 38px;
+}

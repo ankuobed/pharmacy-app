@@ -1,3 +1,5 @@
+package org.school.pharmacyui.models;
+
 // Supplier class
 public class Supplier {
     private int supplierId;

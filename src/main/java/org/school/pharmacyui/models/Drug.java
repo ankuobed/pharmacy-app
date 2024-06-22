@@ -1,3 +1,6 @@
+package org.school.pharmacyui.models;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
@@ -11,7 +14,6 @@ public class Drug implements Comparable<Drug> {
     private int minStockLevel;
     private int maxStockLevel;
     private LinkedList<Supplier> suppliers;
-    private TreeSet<Purchase> purchaseHistory;
 
     public Drug(int drugId, String drugName, String drugDescription, double drugPrice, int drugQuantity, int minStockLevel, int maxStockLevel) {
         this.drugId = drugId;
@@ -22,7 +24,6 @@ public class Drug implements Comparable<Drug> {
         this.minStockLevel = minStockLevel;
         this.maxStockLevel = maxStockLevel;
         this.suppliers = new LinkedList<>();
-        this.purchaseHistory = new TreeSet<>();
     }
 
     public int getDrugId() {
@@ -57,7 +58,15 @@ public class Drug implements Comparable<Drug> {
         return suppliers;
     }
 
-    public TreeSet<Purchase> getPurchaseHistory() {
+    public TreeSet<Purchase> getPurchaseHistory(ArrayList<Purchase> allPurchases) {
+        TreeSet<Purchase> purchaseHistory = new TreeSet<>();
+
+        for(Purchase purchase: allPurchases) {
+            if(purchase.getDrug().getDrugId() == drugId) {
+                purchaseHistory.add(purchase);
+            }
+        }
+
         return purchaseHistory;
     }
 
@@ -72,10 +81,6 @@ public class Drug implements Comparable<Drug> {
             }
         }
         return null;
-    }
-
-    public void addPurchase(Purchase purchase) {
-        purchaseHistory.add(purchase);
     }
 
     public String toString() {
